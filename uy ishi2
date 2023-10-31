@@ -1,0 +1,14 @@
+import sys
+from PyQt5.QtWidgets import QApplication, QMainWindow, QPushButton
+
+def button_bosildi():
+    print("Bosildi")
+
+app = QApplication(sys.argv)
+oyna = QMainWindow()
+button = QPushButton("Bos", oyna)
+button.clicked.connect(button_bosildi)
+oyna.setCentralWidget(button)
+oyna.show()
+
+sys.exit(app.exec_())
